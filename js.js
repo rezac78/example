@@ -1,6 +1,9 @@
-function DNAtoRNA(dna){
-  const newDna= dna.replace(/T/g,"U")
-  console.log(newDna)
+function hero(bullets, dragons) {
+  if ((bullets * dragons) % 2 === 0) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
 }
 
-DNAtoRNA("GCATReZTTdacTed")
+hero(0, 1);
