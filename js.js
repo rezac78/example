@@ -1,5 +1,6 @@
 function DNAtoRNA(dna){
-  console.log(dna)
+  const newDna= dna.replace(/T/g,"U")
+  console.log(newDna)
 }
 
-DNAtoRNA("GCAT")
+DNAtoRNA("GCATReZTTdacTed")
