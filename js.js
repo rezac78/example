@@ -1,9 +1,10 @@
-function hero(bullets, dragons) {
-  if ((bullets * dragons) % 2 === 0) {
-    console.log("true");
-  } else {
-    console.log("false");
+function squareSum(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i] ** 2;
   }
+  // return sum;
+  console.log(sum)
 }
 
-hero(0, 1);
+squareSum([1, 2, 2]);
