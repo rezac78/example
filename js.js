@@ -1,9 +1,5 @@
-function paperwork(n, m) {
-  if (n < 0 || m < 0) {
-    return 0;
-  } else {
-    return n * m;
-  }
+function repeatStr(n, s) {
+  return s.repeat(n);
 }
 
-paperwork(5, 5);
+repeatStr(6, "I");
