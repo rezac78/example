@@ -1,5 +1,9 @@
-function repeatStr(n, s) {
-  return s.repeat(n);
+function remainder(a, b) {
+  if (a > b) {
+    console.log(Math.ceil(a / b));
+  } else if (b > a) {
+    console.log(Math.ceil(b / a));
+  }
 }
 
-repeatStr(6, "I");
+remainder(13, 72);
