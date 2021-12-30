@@ -1,9 +1,35 @@
-function remainder(a, b) {
-  if (a > b) {
-    console.log(Math.ceil(a / b));
-  } else if (b > a) {
-    console.log(Math.ceil(b / a));
+var array1 = [
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  true,
+];
+function countSheeps(arrayOfSheep) {
+  let counter = 0
+  for(let i = 0; i < arrayOfSheep.length; i++) {
+      if(arrayOfSheep[i]) counter += 1
   }
+  console.log(counter);
 }
 
-remainder(13, 72);
+countSheeps(array1);
