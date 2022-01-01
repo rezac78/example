@@ -1,10 +1,5 @@
-function hammingDistance (a, b) {
-	let count = 0
-  let strLength = a.length;
-  for(let i = 0; i < strLength; i++) {
-    if(a[i] != b[i]) count++;
-  }
-  return count;
+function abbrevName(name){
+  return name.replace(/\b(\w)\w+/g, '$1.').replace(/\s/,"").replace(/\.$/, '').toUpperCase();
 }
 
-hammingDistance("1010", "0101")
+abbrevName("sam harris");
