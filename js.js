@@ -1,6 +1,10 @@
-function disemvowel(str) {
-  const reza = str.replace(/[aeiou]/gi,"");
-  console.log(reza)
+function squareDigits(num) {
+  let number = "" + num;
+  let newNum = new Array();
+  number.split("").map((n) => {
+    newNum.push(n ** 2);
+  });
+  return parseInt(newNum.join(""));
 }
 
-disemvowel("This website is for losers LOL");
+squareDigits(9119);
