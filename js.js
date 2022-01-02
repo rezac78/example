@@ -1,5 +1,13 @@
-function abbrevName(name){
-  return name.replace(/\b(\w)\w+/g, '$1.').replace(/\s/,"").replace(/\.$/, '').toUpperCase();
+function getCount(str) {
+  var vowelsCount = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let char of str) {
+    if(vowels.includes(char)) {
+      vowelsCount++;
+    }
+  }
+
+  return vowelsCount;
 }
 
-abbrevName("sam harris");
+getCount("abracadabra");
