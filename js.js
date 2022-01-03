@@ -1,10 +1,17 @@
-function squareDigits(num) {
-  let number = "" + num;
-  let newNum = new Array();
-  number.split("").map((n) => {
-    newNum.push(n ** 2);
-  });
-  return parseInt(newNum.join(""));
+function highAndLow(numbers) {
+  const arr = numbers.split(" ");
+  let maxNum = arr[0];
+  let minNum = arr[0];
+
+  for (let num of arr) {
+    if (Number(num) > maxNum) {
+      maxNum = num;
+    }
+    if (Number(num) < minNum) {
+      minNum = num;
+    }
+  }
+  return maxNum + " " + minNum;
 }
 
-squareDigits(9119);
+highAndLow("1 2 3 4 5");
