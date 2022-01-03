@@ -1,9 +1,26 @@
-String.prototype.toJadenCase = function () {
-  let jCased = [];
-  let words = this.toLowerCase().split(" ");
-  for (let i = 0; i < words.length; i++) {
-    let word = words[i];
-    jCased.push(word[0].toUpperCase() + word.slice(1));
+function XO(str) {
+  // make the string lowercase because we are case insensitive
+  str = str.toLowerCase();
+
+  // put the string into an array
+  var arrayOfCharacters = str.split("");
+
+  //count the x's
+  var countX = arrayOfCharacters.reduce(function (n, val) {
+    return n + (val === "x");
+  }, 0);
+
+  // count the o's
+  var countO = arrayOfCharacters.reduce(function (n, val) {
+    return n + (val === "o");
+  }, 0);
+
+  // do these numbers match? if so return true and if not return false
+  if (countX == countO) {
+    return true;
+  } else {
+    return false;
   }
-  return jCased.join(" ");
-};
+}
+
+XO("zzoo");
