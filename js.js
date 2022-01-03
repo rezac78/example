@@ -1,17 +1,13 @@
-function highAndLow(numbers) {
-  const arr = numbers.split(" ");
-  let maxNum = arr[0];
-  let minNum = arr[0];
-
-  for (let num of arr) {
-    if (Number(num) > maxNum) {
-      maxNum = num;
-    }
-    if (Number(num) < minNum) {
-      minNum = num;
-    }
+function getMiddle(s) {
+  const lengthNum = s.length;
+  if (lengthNum % 2 == 1) {
+    const odd = Math.floor(lengthNum / 2);
+    return s[odd];
+  }else{
+    const even = Math.floor(lengthNum / 2);
+    const even1 = Math.floor((lengthNum / 2)-1);
+    // return ;
+    console.log(s[even]+s[even1])
   }
-  return maxNum + " " + minNum;
 }
-
-highAndLow("1 2 3 4 5");
+getMiddle("test");
