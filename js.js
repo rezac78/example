@@ -1,14 +1,6 @@
-function accum(s) {
-  const result = [];
-  const lowerStr = s.toLowerCase();
-  for (let i = 0; i < lowerStr.length; i++) {
-    let str = lowerStr[i].toUpperCase();
-    for (let j = 0; j < i; j++) {
-      str += lowerStr[i];
-    }
-    result.push(str);
-  }
-  return result.join("-");
+function findShort(s){
+  const result = Math.min(...s.split(' ').map((word) => word.length));
+  return result;
 }
 
-accum("abcd");
+findShort("turns out random test cases are easier than writing out basic ones");
