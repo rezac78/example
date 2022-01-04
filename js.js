@@ -1,5 +1,13 @@
-function filter_list(l) {
-  console.log(l.filter((x) => typeof x === "number"));
+function isIsogram(str) {
+  const newStr = str.toLowerCase();
+  for (let i = 0; i < newStr.length; i++) {
+    for (let j = i + 1; j < newStr.length; j++) {
+      if (newStr[i] === newStr[j]) {
+        return false;
+      }
+    }
+  }
+  return true;
 }
 
-filter_list([1, 2, "a", "b"]);
+isIsogram("aba");
