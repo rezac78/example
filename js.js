@@ -1,8 +1,11 @@
-function DNAStrand(dna) {
-  var letters = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'};
-  var arr = [];
-  for (var i=0; i < dna.length; i++) {
-      arr[i] = letters[dna[i]];
+function getSum(a, b) {
+  if (a === b) {
+    return a;
+  } else if (a < b) {
+    return a + getSum(a + 1, b);
+  } else {
+    return a + getSum(a - 1, b);
   }
-  return arr.join('');
 }
+
+getSum(1, 1);
