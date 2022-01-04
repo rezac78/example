@@ -1,13 +1,8 @@
-function isIsogram(str) {
-  const newStr = str.toLowerCase();
-  for (let i = 0; i < newStr.length; i++) {
-    for (let j = i + 1; j < newStr.length; j++) {
-      if (newStr[i] === newStr[j]) {
-        return false;
-      }
-    }
+function DNAStrand(dna) {
+  var letters = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'};
+  var arr = [];
+  for (var i=0; i < dna.length; i++) {
+      arr[i] = letters[dna[i]];
   }
-  return true;
+  return arr.join('');
 }
-
-isIsogram("aba");
