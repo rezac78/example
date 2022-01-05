@@ -1,11 +1,8 @@
-function getSum(a, b) {
-  if (a === b) {
-    return a;
-  } else if (a < b) {
-    return a + getSum(a + 1, b);
-  } else {
-    return a + getSum(a - 1, b);
-  }
+function sumTwoSmallestNumbers(numbers) {
+  var ordered = numbers.sort(function (a, b) {
+    return a - b;
+  });
+  const sum = ordered[0] + ordered[1] 
+  return sum
 }
-
-getSum(1, 1);
+sumTwoSmallestNumbers([19, 5, 42, 2, 77]);
