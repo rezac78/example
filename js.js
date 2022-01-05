@@ -1,12 +1,14 @@
-// return masked string
-function maskify(cc) {
-  let masked = "";
-  let lastFour = cc.substr(-4);
-
-  for (var i = 0; i < cc.length - 4; i++) {
-    masked += "#";
+function nbYear(p0, percent, aug, p) {
+  var n = 0;
+  while (p0 < p) {
+    n++
+    p0 = p0 + (p0*percent/100) + aug;
   }
-  return masked + lastFour;
+  if (p0 >= p) {
+      return n;
+  }
+  return n;
+
 }
 
-maskify("Skippy");
+nbYear(1500, 5, 100, 5000);
