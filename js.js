@@ -1,8 +1,12 @@
-function sumTwoSmallestNumbers(numbers) {
-  var ordered = numbers.sort(function (a, b) {
-    return a - b;
-  });
-  const sum = ordered[0] + ordered[1] 
-  return sum
+// return masked string
+function maskify(cc) {
+  let masked = "";
+  let lastFour = cc.substr(-4);
+
+  for (var i = 0; i < cc.length - 4; i++) {
+    masked += "#";
+  }
+  return masked + lastFour;
 }
-sumTwoSmallestNumbers([19, 5, 42, 2, 77]);
+
+maskify("Skippy");
