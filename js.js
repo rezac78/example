@@ -1,8 +1,15 @@
-function createPhoneNumber(numbers) {
-  const perNumber = numbers.slice(0, 3).join("");
-  const number = numbers.slice(3, 6).join("");
-  const numberPer = numbers.slice(6, 10).join("");
-  return `(${perNumber}) ${number}-${numberPer}`;
+function likes(names) {
+  if (names.length === 0) {
+    return "no one likes this";
+  } else if (names.length === 1) {
+    return `${names} likes this`;
+  } else if (names.length === 2) {
+    return `${names[0]} and ${names[1]} likes this`;
+  } else if (names.length === 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} likes this`;
+  } else {
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others likes this`;
+  }
 }
 
-createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+likes(["reza", "alireza", "mohamadreza", "reza", "kiana"]);
