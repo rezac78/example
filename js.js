@@ -1,13 +1,16 @@
-function digital_root(n) {
-  if (n < 10) return n;
-  return digital_root(
-    n
-      .toString()
-      .split("")
-      .reduce((acc, d) => {
-        return acc + +d;
-      }, 0)
-  );
+function spinWords(string) {
+  const sentence = "";
+  const separate = string.split(" ");
+
+  for (let i = 0; i < separate.length; i++) {
+    if (sentence) sentence += " ";
+    if (separate[i].length >= 5) {
+      sentence += separate[i].split("").reverse().join("");
+    }else{
+      sentence += separate[i]
+    }
+  }
+  return sentence;
 }
 
-digital_root(12);
+spinWords("This is another tes");
