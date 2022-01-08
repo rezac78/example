@@ -1,7 +1,10 @@
-function findOutlier(int) {
-  var even = int.filter((a) => a % 2 === 0);
-  var odd = int.filter((a) => a % 2 !== 0);
-  return even.length === 1 ? even[0] : odd[0];
-}
+function alphabetPosition(text) {
+  var result = "";
+  for (var i = 0; i < text.length; i++) {
+    var code = text.toUpperCase().charCodeAt(i)
+    if (code > 64 && code < 91) result += (code - 64) + " ";
+  }
 
-findOutlier([2, 4, 0, 100, 4, 11, 2602, 36]);
+  return result.slice(0, result.length - 1);
+}
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
