@@ -1,10 +1,10 @@
-function alphabetPosition(text) {
-  var result = "";
-  for (var i = 0; i < text.length; i++) {
-    var code = text.toUpperCase().charCodeAt(i)
-    if (code > 64 && code < 91) result += (code - 64) + " ";
+var uniqueInOrder = function (iterable) {
+  const newStr = [];
+  for (let i = 0; i < iterable.length; i++) {
+    if (iterable[i] !== iterable[i + 1]) {
+      newStr.push(iterable[i])
+    }
   }
-
-  return result.slice(0, result.length - 1);
-}
-console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+  return newStr
+};
+uniqueInOrder("AAAABBBCCDAABBB");
