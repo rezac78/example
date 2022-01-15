@@ -1,16 +1,9 @@
-function sortArray(array) {
-  const even = array.map((elm) => (elm % 2 == 0 ? elm : ""));
-  const odd = array.filter((elm) => elm % 2 == 1).sort((a, b) => a - b);
-  const result = [];
-  for (let i = 0, j = 0; i < array.length; i += 1) {
-    if (even[i] === "") {
-      result.push(odd[+j]);
-      j += 1;
-    } else {
-      result.push(even[i]);
-    }
-  }
-  return result;
+function deleteNth(arr, x) {
+  var count = {};
+  return arr.filter(function(a){
+    count[a] = ~~count[a]+1;
+    return count[a]<=x;
+  })
 }
 
-sortArray([5, 8, 6, 3, 4]);
+deleteNth([1, 1, 1, 1], 2);
