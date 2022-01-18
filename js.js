@@ -1,14 +1,17 @@
-const reza = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("reza");
-    reject("something went wrong");
-  }, 1000);
-});
+const getFullname = (firstname, lastname) => {
+  return Promise.resolve(`${firstname} ${lastname}`);
+};
 
-promise.then((result) => {
-  console.log(result)
-}).catch((err) => {
-  console.log(err)
-}).finally(() => {
-  console.log("clean up")
-})
+const getage = (fullname, age) => {
+  return Promise.resolve(`${fullname} is ${age} years old.`);
+};
+
+const getAddress = (address) => {
+  return Promise.resolve(`${address}`);
+};
+
+getFullname("reza", "dalvand").then((fullname) => {
+  getage(fullname,22).then(result => {
+    console.log(result)
+  })
+});
