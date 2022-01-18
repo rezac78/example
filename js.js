@@ -1,11 +1,14 @@
-function rowSumOddNumbers(n) {
-  const oddNumbers = [];
-  let startNumber = n * n - (n - 1);
-  while (n > 0) {
-    oddNumbers.push(startNumber);
-    startNumber += 2;
-    n--;
-  }
-  const sum = oddNumbers.reduce((a, b) => a + b, 0);
-  return sum;
-}
+const reza = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("reza");
+    reject("something went wrong");
+  }, 1000);
+});
+
+promise.then((result) => {
+  console.log(result)
+}).catch((err) => {
+  console.log(err)
+}).finally(() => {
+  console.log("clean up")
+})
