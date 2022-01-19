@@ -1,17 +1,10 @@
-const getFullname = (firstname, lastname) => {
-  return Promise.resolve(`${firstname} ${lastname}`);
-};
+const MouseOver = document.getElementById("Click");
 
-const getage = (fullname, age) => {
-  return Promise.resolve(`${fullname} is ${age} years old.`);
-};
-
-const getAddress = (address) => {
-  return Promise.resolve(`${address}`);
-};
-
-getFullname("reza", "dalvand").then((fullname) => {
-  getage(fullname,22).then(result => {
-    console.log(result)
-  })
+MouseOver.addEventListener("mousemove", function (e) {
+  e.target.style.background = "red";
+  e.target.style.width = "80px";
 });
+
+function submitClick() {
+  alert("hello word");
+}
