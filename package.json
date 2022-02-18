@@ -1,25 +1,24 @@
 {
-  "name": "example-1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "js.js",
-  "scripts": {
-    "start": "nodemon app"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rezac78/example.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rezac78/example/issues"
-  },
-  "homepage": "https://github.com/rezac78/example#readme",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2"
-  }
+    "name": "weblog-project",
+    "version": "1.0.0",
+    "description": "Simple weblog",
+    "main": "app.js",
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node app",
+        "dev": "cross-env NODE_ENV=development nodemon app"
+    },
+    "keywords": [],
+    "author": "Reza Dalvand",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.26.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.13.14",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.2"
+    }
 }
