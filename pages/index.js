@@ -70,7 +70,7 @@ export default function Home() {
       setSinglePerson("");
       setSingleInformation("");
       // send Data to the database
-      axios.post("http://localhost:3001/api", person);
+      axios.post("https://vet-r-d-api.onrender.com/api", person);
     }
   };
   // handle Clear input after saveing
