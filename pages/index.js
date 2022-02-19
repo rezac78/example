@@ -45,7 +45,7 @@ export default function Home() {
     });
   };
   // handle New Person
-  const handleNewPerson = () => {
+  const handleNewPerson = async () => {
     const persons = [...getPersons];
     const person = {
       id: Math.floor(Math.random() * 1000),
@@ -70,7 +70,7 @@ export default function Home() {
       setSinglePerson("");
       setSingleInformation("");
       // send Data to the database
-      axios.post("https://vet-r-d-api.onrender.com/api", person);
+      await api.post("/api/", person);
     }
   };
   // handle Clear input after saveing
