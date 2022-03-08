@@ -70,7 +70,7 @@ export default function Home() {
       setSinglePerson("");
       setSingleInformation("");
       // send Data to the database
-      await api.post("/api/", person);
+      api.post("/api/", person);
     }
   };
   // handle Clear input after saveing
